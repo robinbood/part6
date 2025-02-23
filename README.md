@@ -1,1 +1,1 @@
-<h1>i'm gonna mention that this repo is ffor part 6 of fullstackopen so others can see the clean code ;)</h1>
+<h1>i'm gonna mention that this repo is ffor <b>part 6</b> of fullstackopen so others can see the clean code ;)</h1>
