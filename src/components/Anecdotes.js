@@ -12,7 +12,7 @@ const Anecdotes = () => {
     const dispatch = useDispatch()
     const anecdotes = useSelector(state => {
         return state.filter === 'FILTER' 
-        ? state.anecdotes.includes(state.content.includes(filter))
+        ? state.anecdotes.includes(state.content.includes(filter)) : state.anecdotes
     })
 
     return (
