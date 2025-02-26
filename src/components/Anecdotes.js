@@ -3,16 +3,19 @@ import { toggleVotes } from "../reducers/anecdoteReducer";
 
 const Anecdote = ({anecdote,handleClick}) => {
     return (
-        <li onClick={handleClick}>
-            {anecdote.content}
+        <li >
+            {anecdote}
+            <button onClick={handleClick}>vote</button>
         </li>
     )
 }
 const Anecdotes = () => {
     const dispatch = useDispatch()
     const anecdotes = useSelector(state => {
-        return state.filter === 'FILTER' 
-        ? state.anecdotes.includes(state.content.includes(filter)) : state.anecdotes
+        const filter = state.filter.toLowerCase()
+        return filter === 'FILTER'
+            ? state.anecdotes.filter(anecdote => anecdote.content.toLowerCase().includes(filter)) 
+            : state.anecdotes
     })
 
     return (
